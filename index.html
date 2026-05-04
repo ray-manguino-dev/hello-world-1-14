@@ -8,7 +8,27 @@
 </head>
 <body>
     <main>
-        <h1>Hello World</h1>
+        <div class="container">
+            <h1>Hello World</h1>
+            <form id="name-form" class="name-form" novalidate>
+                <label for="name-input">What is your name?</label>
+                <div class="form-row">
+                    <input
+                        type="text"
+                        id="name-input"
+                        name="name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        required
+                    >
+                    <button type="submit">Say Hello</button>
+                </div>
+                <p id="name-error" class="name-error" role="alert" aria-live="polite"></p>
+            </form>
+            <div id="welcome-message" class="welcome-message" role="status" aria-live="polite" hidden>
+                <p class="welcome-text"></p>
+            </div>
+        </div>
     </main>
     <script src="app.js"></script>
 </body>
